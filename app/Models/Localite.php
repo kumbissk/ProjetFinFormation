@@ -11,9 +11,14 @@ class Localite extends Model
 
     protected $fillable = ['nom', 'commune_id'];
 
+    public function personnes()
+    {
+        return $this->hasMany(Personne::class);
+    }
+
     /**
-     * Get the user that owns the Quartier
-     *
+     * Get all of the comments for the localite
+     * 
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
     */
 
