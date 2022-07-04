@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Livreur;
 use Illuminate\Http\Request;
 
 class LivreurController extends Controller
@@ -13,7 +14,9 @@ class LivreurController extends Controller
      */
     public function index()
     {
-        //
+        $livreurs = Livreur::all();
+        return view('livreurs.index', ['livreurs' => $livreurs]);
+        
     }
 
     /**

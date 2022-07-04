@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LivreurController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/livreurs', [LivreurController::class, 'index'])->name('livreurs.index');
