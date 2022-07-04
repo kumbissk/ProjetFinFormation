@@ -20,4 +20,15 @@ class Commande extends Model
         'client_id', 
         'livreur_id'
     ];
+
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
+
+    public function livreur()
+    {
+        return $this->belongsTo(Livreur::class);
+    }
 }
